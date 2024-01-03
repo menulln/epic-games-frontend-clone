@@ -3,6 +3,7 @@ function sidebarComponent() {
 
     nav.appendChild(logoComponent());
     nav.appendChild(menuComponent());
+    nav.appendChild(launchComponent());
 
     function logoComponent() {
         const logoElement = document.createElement('img');
@@ -39,6 +40,37 @@ function sidebarComponent() {
         return menuElement;
     }
 
+    function launchComponent() {
+        const launchElement = document.createElement('article');
+        const launchList = document.createElement('ul');
+        const launchTitle = document.createElement('h6');
+
+        launchTitle.textContent = 'Quick Launch';
+        
+        launchList.appendChild(createLaunchItem('gta', 'Grand Theft Auto'));
+        launchList.appendChild(createLaunchItem('fn', 'Fortnite'));
+        launchList.appendChild(createLaunchItem('thps', 'Tony Hawk'));
+        launchList.appendChild(createLaunchItem('valo', 'Valorant'));
+
+        launchElement.appendChild(launchTitle);
+        launchElement.appendChild(launchList);
+
+        function createLaunchItem(imgName, title) {
+            const launchItem = document.createElement('li');
+            const itemImg = document.createElement('img');
+            const itemTitle = document.createElement('p');
+
+            itemImg.src = `../src/images/games/portrait_${imgName}.png`;
+            itemTitle.textContent = title;
+            
+            launchItem.appendChild(itemImg);
+            launchItem.appendChild(itemTitle);
+
+            return launchItem;
+        }
+        return launchElement;
+    }
+    
     return nav;
 }
 
