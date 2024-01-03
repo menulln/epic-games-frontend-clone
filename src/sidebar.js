@@ -1,0 +1,5 @@
+function sidebarComponent() {
+
+}
+
+export { sidebarComponent };
