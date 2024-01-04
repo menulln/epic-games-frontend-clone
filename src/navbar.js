@@ -4,6 +4,7 @@ function navbarComponent(page) {
 
     nav.appendChild(spacer);
     nav.appendChild(searchComponent());
+    nav.appendChild(profileComponent());
 
     function searchComponent() {
         const div = document.createElement('div');
@@ -29,6 +30,33 @@ function navbarComponent(page) {
             div.appendChild(news);
         }
         
+        return div;
+    }
+
+    function profileComponent() {
+        const div = document.createElement('div');
+        const wishlist = document.createElement('p');
+        const cart = document.createElement('p');
+        const friendlist = document.createElement('div');
+        const friendlistIcon = document.createElement('i');
+        const friendlistCount = document.createElement('p');
+        const profileName = document.createElement('p');
+
+        wishlist.textContent = 'Wishlist';
+        cart.textContent = 'Cart';
+        friendlistIcon.classList.toggle('fa-solid');
+        friendlistIcon.classList.toggle('fa-user-group');
+        friendlistCount.textContent = '7';
+        profileName.textContent = 'M';
+        
+        friendlist.appendChild(friendlistIcon);
+        friendlist.appendChild(friendlistCount);
+
+        div.appendChild(wishlist);
+        div.appendChild(cart);
+        div.appendChild(friendlist);
+        div.appendChild(profileName);
+
         return div;
     }
 
