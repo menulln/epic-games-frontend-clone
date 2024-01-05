@@ -4,6 +4,8 @@ function libraryComponent() {
     main.appendChild(titleComponent());
     main.appendChild(categoriesComponent());
     main.appendChild(sortViewComponent());
+    main.appendChild
+
 
     function titleComponent() {
         const div = document.createElement('div');
@@ -67,6 +69,14 @@ function libraryComponent() {
         div.appendChild(viewDiv);
 
         return div;
+    }
+
+    function filtersTitleComponent() {
+        const filtersParagraph = document.createElement('p');
+
+        filtersParagraph.textContent = 'Filters';
+
+        return filtersParagraph;
     }
 
     return main;
