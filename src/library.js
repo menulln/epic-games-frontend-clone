@@ -1,0 +1,5 @@
+function libraryComponent() {
+
+}
+
+export { libraryComponent };
