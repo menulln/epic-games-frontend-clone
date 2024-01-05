@@ -3,6 +3,7 @@ function libraryComponent() {
 
     main.appendChild(titleComponent());
     main.appendChild(categoriesComponent());
+    main.appendChild(sortViewComponent());
 
     function titleComponent() {
         const div = document.createElement('div');
@@ -32,6 +33,38 @@ function libraryComponent() {
         div.appendChild(allParagraph);
         div.appendChild(favoritesParagraph);
         div.appendChild(plusParagraph);
+
+        return div;
+    }
+
+    function sortViewComponent() {
+        const div = document.createElement('div');
+        const sortDiv = document.createElement('div');
+        const viewDiv = document.createElement('div');
+        const sortParagraph = document.createElement('p');
+        const recentlyParagraph = document.createElement('p');
+        const arrowIcon = document.createElement('i');
+        const gridIcon = document.createElement('i');
+        const listIcon = document.createElement('i');
+
+        sortParagraph.textContent = 'Sort by:';
+        recentlyParagraph.textContent = 'Recently Purchased';
+        arrowIcon.classList.toggle('fa-solid');
+        arrowIcon.classList.toggle('fa-chevron-down');
+        gridIcon.classList.toggle('fa-solid');
+        gridIcon.classList.toggle('fa-grip');
+        listIcon.classList.toggle('fa-solid');
+        listIcon.classList.toggle('fa-list-ul');
+
+        sortDiv.appendChild(sortParagraph);
+        sortDiv.appendChild(recentlyParagraph);
+        sortDiv.appendChild(arrowIcon);
+
+        viewDiv.appendChild(gridIcon);
+        viewDiv.appendChild(listIcon);
+
+        div.appendChild(sortDiv);
+        div.appendChild(viewDiv);
 
         return div;
     }
