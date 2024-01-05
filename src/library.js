@@ -6,6 +6,7 @@ function libraryComponent() {
     main.appendChild(sortViewComponent());
     main.appendChild(filtersTitleComponent());
     main.appendChild(libraryItemsComponent());
+    main.appendChild(filtersComponent());
 
     function titleComponent() {
         const div = document.createElement('div');
@@ -137,6 +138,38 @@ function libraryComponent() {
             item.appendChild(launchDiv);
 
             return item;
+        }
+
+        return div;
+    }
+
+    function filtersComponent() {
+        const div = document.createElement('div');
+
+        const filterInput = document.createElement('input');
+        const installedParagraph = document.createElement('p');
+        installedParagraph.textContent = 'Installed (11)';
+
+        div.appendChild(filterInput);
+        div.appendChild(installedParagraph);
+        div.appendChild(filterComponent('Genre'));
+        div.appendChild(filterComponent('Features'));
+        div.appendChild(filterComponent('Types'));
+        div.appendChild(filterComponent('Platform'));
+
+        function filterComponent(title) {
+            const filterItemDiv = document.createElement('div');
+            const titleParagraph = document.createElement('p');
+            const icon = document.createElement('i');
+
+            titleParagraph.textContent = title;
+            icon.classList.toggle('fa-solid');
+            icon.classList.toggle('fa-chevron-down');
+
+            filterItemDiv.appendChild(titleParagraph);
+            filterItemDiv.appendChild(icon);
+
+            return filterItemDiv;
         }
 
         return div;
