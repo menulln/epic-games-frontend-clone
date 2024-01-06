@@ -1,3 +1,17 @@
+:root {
+    --clr-bg: #121212;
+    --clr-menu-hvr: #2a2a2a;
+    --clr-menu-act: #202020;
+    --clr-menu-hvr-act: #373737;
+    --clr-font: #9a9a9a;
+    --clr-font-hvr-act: #f5f5f5;
+    --clr-accent-font: #a3a3a3;
+    --clr-crsl-hvr: #2a2a2a;
+    --clr-crsl-act: #252525;
+    --clr-crsl-fade: #363636;
+    --clr-white: #f5f5f5;
+}
+
 * {
     margin: 0;
     padding: 0;
