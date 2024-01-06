@@ -1,3 +1,5 @@
+import './navbar.css';
+
 function navbarComponent(page) {
     const nav = document.createElement('nav');
 
@@ -14,9 +16,13 @@ function navbarComponent(page) {
         const browse = document.createElement('p');
         const news = document.createElement('p');
 
+        div.classList.toggle('search-area');
+
         arrowIcon.classList.toggle('fa-solid');
         arrowIcon.classList.toggle('fa-chevron-left');
         searchBar.type = 'text';
+        searchBar.placeholder = 'Search store';
+        searchBar.spellcheck = 'false';
         discover.textContent = 'Discover';
         browse.textContent = 'Browse';
         news.textContent = 'News';
@@ -37,10 +43,15 @@ function navbarComponent(page) {
         const div = document.createElement('div');
         const wishlist = document.createElement('p');
         const cart = document.createElement('p');
+        const spacer = document.createElement('div');
         const friendlist = document.createElement('div');
         const friendlistIcon = document.createElement('i');
         const friendlistCount = document.createElement('p');
         const profileName = document.createElement('p');
+
+        div.classList.toggle('profile-area');
+        spacer.classList.toggle('spacer');
+        friendlist.classList.toggle('friendlist');
 
         wishlist.textContent = 'Wishlist';
         cart.textContent = 'Cart';
@@ -54,6 +65,7 @@ function navbarComponent(page) {
 
         div.appendChild(wishlist);
         div.appendChild(cart);
+        div.appendChild(spacer);
         div.appendChild(friendlist);
         div.appendChild(profileName);
 
