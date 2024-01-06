@@ -11,6 +11,8 @@ function sidebarComponent() {
     function menuComponent() {
         const menuElement = document.createElement('article');
         const menuList = document.createElement('ul');
+
+        menuElement.classList.toggle('side-menu');
         
         menuList.appendChild(createMenuItem('fa-tag', 'Store'));
         menuList.appendChild(createMenuItem('fa-folder', 'Library'));
@@ -26,6 +28,7 @@ function sidebarComponent() {
             menuItem.classList.toggle('menu-item');
 
             itemIcon.classList.toggle('fa-solid');
+            itemIcon.classList.toggle('fa-xl');
             itemIcon.classList.toggle(iconClass);
 
             itemTitle.textContent = title;
@@ -43,6 +46,8 @@ function sidebarComponent() {
         const launchList = document.createElement('ul');
         const launchTitle = document.createElement('h6');
 
+        launchElement.classList.toggle('quick-launch');
+
         launchTitle.textContent = 'Quick Launch';
         
         launchList.appendChild(createLaunchItem('gta', 'Grand Theft Auto'));
@@ -57,6 +62,8 @@ function sidebarComponent() {
             const launchItem = document.createElement('li');
             const itemImg = document.createElement('img');
             const itemTitle = document.createElement('p');
+
+            launchItem.classList.toggle('quick-launch-item');
 
             itemImg.src = `../src/images/games/portrait_${imgName}.png`;
             itemTitle.textContent = title;
