@@ -1,3 +1,5 @@
+import './sidebar.css';
+
 function sidebarComponent() {
     const nav = document.createElement('nav');
 
