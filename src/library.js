@@ -1,5 +1,9 @@
+import './library.css';
+
 function libraryComponent() {
     const main = document.createElement('main');
+
+    main.classList.toggle('library');
 
     main.appendChild(titleComponent());
     main.appendChild(categoriesComponent());
@@ -12,6 +16,8 @@ function libraryComponent() {
         const div = document.createElement('div');
         const libraryTitle = document.createElement('h1');
         const reloadIcon = document.createElement('i');
+
+        div.classList.toggle('library-title');
 
         libraryTitle.textContent = 'Library';
         reloadIcon.classList.toggle('fa-solid');
@@ -28,6 +34,8 @@ function libraryComponent() {
         const allParagraph = document.createElement('p');
         const favoritesParagraph = document.createElement('p');
         const plusParagraph = document.createElement('p');
+
+        div.classList.toggle('library-categories');
 
         allParagraph.textContent = 'All';
         favoritesParagraph.textContent = 'Favorites';
@@ -49,6 +57,10 @@ function libraryComponent() {
         const arrowIcon = document.createElement('i');
         const gridIcon = document.createElement('i');
         const listIcon = document.createElement('i');
+
+        div.classList.toggle('library-sort');
+        sortDiv.classList.toggle('sort');
+        viewDiv.classList.toggle('view');
 
         sortParagraph.textContent = 'Sort by:';
         recentlyParagraph.textContent = 'Recently Purchased';
@@ -75,6 +87,8 @@ function libraryComponent() {
     function filtersTitleComponent() {
         const filtersParagraph = document.createElement('p');
 
+        filtersParagraph.classList.toggle('library-filters-title');
+
         filtersParagraph.textContent = 'Filters';
 
         return filtersParagraph;
@@ -82,6 +96,8 @@ function libraryComponent() {
 
     function libraryItemsComponent() {
         const div = document.createElement('div');
+
+        div.classList.toggle('library-games');
 
         div.appendChild(createLibraryItem('ac', 'Assassin\'s Creed', true));
         div.appendChild(createLibraryItem('aw', 'Alan Wake II', false));
@@ -113,6 +129,8 @@ function libraryComponent() {
             const launchDiv = document.createElement('div');
             const launchIcon = document.createElement('i');
             const launchParagraph = document.createElement('p');
+
+            item.classList.toggle('game');
 
             img.src = `../src/images/games/portrait_${imgName}.png`;
             titleParagraph.textContent = title;
@@ -146,9 +164,13 @@ function libraryComponent() {
     function filtersComponent() {
         const div = document.createElement('div');
 
+        div.classList.toggle('library-filters');
+
         const filterInput = document.createElement('input');
         const installedParagraph = document.createElement('p');
         installedParagraph.textContent = 'Installed (11)';
+
+        filterInput.placeholder = 'Title';
 
         div.appendChild(filterInput);
         div.appendChild(installedParagraph);
