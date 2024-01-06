@@ -3,7 +3,7 @@ import './sidebar.css';
 function sidebarComponent() {
     const nav = document.createElement('nav');
     
-    nav.classList.toggle('side-nav');
+    nav.classList.toggle('sidebar');
 
     nav.appendChild(menuComponent());
     nav.appendChild(launchComponent());
