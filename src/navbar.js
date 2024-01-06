@@ -1,7 +1,7 @@
 function navbarComponent(page) {
     const nav = document.createElement('nav');
 
-    nav.classList.toggle('top-nav');
+    nav.classList.toggle('navbar');
 
     nav.appendChild(searchComponent());
     nav.appendChild(profileComponent());
