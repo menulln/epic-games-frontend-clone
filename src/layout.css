@@ -6,8 +6,12 @@
     grid-template-rows: 150px 1fr;
 }
 
+.logo {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
 .side-nav {
-    grid-area: 1 / 1 / 3 / 2;
+    grid-area: 2 / 1 / 3 / 2;
 }
 
 .top-nav {
