@@ -2,17 +2,11 @@ import './sidebar.css';
 
 function sidebarComponent() {
     const nav = document.createElement('nav');
+    
+    nav.classList.toggle('side-nav');
 
-    nav.appendChild(logoComponent());
     nav.appendChild(menuComponent());
     nav.appendChild(launchComponent());
-
-    function logoComponent() {
-        const logoElement = document.createElement('img');
-        logoElement.src = '../src/images/epic_logo.png';
-        
-        return logoElement;
-    }
 
     function menuComponent() {
         const menuElement = document.createElement('article');
@@ -28,6 +22,8 @@ function sidebarComponent() {
             const menuItem = document.createElement('li');
             const itemIcon = document.createElement('i');
             const itemTitle = document.createElement('p');
+
+            menuItem.classList.toggle('menu-item');
 
             itemIcon.classList.toggle('fa-solid');
             itemIcon.classList.toggle(iconClass);
