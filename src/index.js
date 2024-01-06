@@ -1,7 +1,7 @@
 import { sidebarComponent } from './sidebar';
 import { navbarComponent  } from './navbar';
 import { libraryComponent } from './library';
-import './reset.css';
+import './global.css';
 
 const content = document.querySelector('#content');
 
