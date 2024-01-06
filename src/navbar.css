@@ -1,0 +1,80 @@
+@import './global.css';
+
+.navbar {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 0 50px 0 25px;
+    color: var(--clr-font);
+}
+
+.navbar > div {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.search-area > input {
+    height: 40px;
+    width: 220px;
+    background-color: var(--clr-menu-act);
+    border: 0;
+    border-radius: 50px;
+    padding-left: 15px;
+    color: var(--clr-white);
+}
+
+.search-area > input:focus {
+    background-color: var(--clr-menu-hvr);
+    outline: none;
+}
+
+.search-area > p:hover,
+.profile-area > p:hover,
+.profile-area > div:hover {
+    cursor: pointer;
+}
+
+.search-area > p:hover,
+.profile-area > p:hover {
+    color: var(--clr-font-hvr-act);
+}
+
+.friendlist, 
+.friendlist + p {
+    color: var(--clr-font-hvr-act);
+    background-color: var(--clr-menu-act);
+    border-radius: 50px;
+}
+
+.friendlist:hover, 
+.friendlist + p:hover {
+    background-color: var(--clr-menu-hvr);
+}
+
+.friendlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 60px;
+    height: 40px;
+}
+
+.friendlist > p {
+    display: inline;
+}
+
+.friendlist + p {
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.spacer {
+    width: 1px;
+    height: 40px;
+    background-color: var(--clr-menu-act);
+    margin-left: 10px;
+}
