@@ -1,8 +1,8 @@
 function navbarComponent(page) {
     const nav = document.createElement('nav');
-    const spacer = document.createElement('div');
 
-    nav.appendChild(spacer);
+    nav.classList.toggle('top-nav');
+
     nav.appendChild(searchComponent());
     nav.appendChild(profileComponent());
 
