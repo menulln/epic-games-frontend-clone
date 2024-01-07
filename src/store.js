@@ -1,0 +1,5 @@
+function storeComponent() {
+
+}
+
+export { storeComponent };
