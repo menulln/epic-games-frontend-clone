@@ -21,6 +21,11 @@
     font-size: 1.05rem;
 }
 
+.menu-item,
+.quick-launch-item {
+    cursor: pointer;
+}
+
 .menu-item > i {
     justify-self: center;
 }

@@ -29,6 +29,11 @@
 
 .library-title > i {
     color: var(--clr-font);
+    cursor: pointer;
+}
+
+.library-title > i:hover {
+    color: var(--clr-font-hvr-act);
 }
 
 .library-categories {
@@ -48,10 +53,21 @@
     color: var(--clr-font-hvr-act);
 }
 
+.library-categories > p:nth-child(2):hover {
+    color: var(--clr-font-hvr-act);
+    cursor: pointer;
+}
+
 .library-categories > p:last-child {
     padding: 1px 7px;
     border: 2px solid var(--clr-font-hvr-act);
     border-radius: 50px;
+}
+
+.library-categories > p:last-child:hover {
+    color: var(--clr-font-hvr-act);
+    background-color: var(--clr-menu-hvr);
+    cursor: pointer;
 }
 
 .library-sort {
@@ -70,6 +86,11 @@
 
 .sort > p:last-of-type {
     margin: 0 10px;
+    cursor: pointer;
+}
+
+.sort > i  {
+    cursor: pointer;
 }
 
 .view > i {
@@ -89,6 +110,7 @@
 
 .view > i:last-child:hover {
     background-color: var(--clr-menu-hvr);
+    cursor: pointer;
 }
 
 .library-games {
@@ -103,6 +125,7 @@
     padding: 15px;
     width: fit-content;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .game:hover {
@@ -169,6 +192,7 @@
     border-top: 1px solid var(--clr-menu-act);
     border-bottom: 1px solid var(--clr-menu-act);
     padding: 20px 0;
+    cursor: pointer;
 }
 
 .library-filters > div {
@@ -180,4 +204,10 @@
     text-transform: uppercase;
     font-size: 0.9rem;
     border-bottom: 1px solid var(--clr-menu-act);
+    cursor: pointer;
+}
+
+.library-filters > div:hover,
+.library-filters > p:hover {
+    color: var(--clr-font-hvr-act);
 }
